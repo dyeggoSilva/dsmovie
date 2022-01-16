@@ -1,15 +1,15 @@
 import MovieScore from 'components/movieScore';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { Movie } from "types/movie";
 
-function MovieCards() {
-    const movie = {
-        id: 1,
-        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
-        title: "The Witcher",
-        count: 2,
-        score: 4.5
-    };
+type Props = {
+    movie: Movie;
+}
+
+function MovieCards( { movie } : Props) {
+ 
+    
 
     return (
         <div>
@@ -21,6 +21,6 @@ function MovieCards() {
             </div>
         </div>
     );
-}
+};
 export default MovieCards;
 
